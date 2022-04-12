@@ -1,0 +1,2096 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+a {
+  color: #000; }
+
+nav, footer, header, aside {
+  display: block; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0; }
+
+/*--------------------*/
+/*font-family: 'Asap', sans-serif;
+font-family: 'Poppins', sans-serif;*/
+body {
+  background: rgba(229, 229, 229, 0.4);
+  color: #FAF8F5;
+  font-family: 'Helvetica Neue Cyr', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'TT Travels', sans-serif;
+  color: #1a1a1a; }
+
+h1 {
+  font-weight: 700;
+  font-size: 44px; }
+
+h2 {
+  font-weight: 700;
+  font-size: 44px; }
+
+h3 {
+  font-weight: 500;
+  font-size: 34px; }
+
+h4 {
+  font-size: 22px; }
+
+h5 {
+  font-size: 13px;
+  font-weight: 500; }
+
+h6 {
+  font-size: 13px; }
+
+li {
+  font-family: 'Helvetica Neue Cyr', sans-serif;
+  font-size: 16px; }
+
+p {
+  font-size: 20px;
+  color: #08150A; }
+
+.bg {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-family: 'TT Travels', sans-serif;
+  z-index: 3;
+  text-align: center;
+  padding: 5px 5px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  border-radius: 5px; }
+
+.btn {
+  background-color: #773844;
+  padding: 15px 20px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
+  line-height: 20px;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.btn:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05); }
+
+.btn:active {
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95); }
+
+.btn:focus {
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95); }
+
+/************************************************************************************************************************************************************************************
+************ПЕРВЫЙ БЛОК ХЕДЕР***************************
+********************************************************/
+.header {
+  padding: 20px 0 50px 0;
+  max-width: 1336px;
+  margin: 0 auto; }
+
+.header__block-title {
+  text-align: center;
+  max-width: 867px;
+  margin: 0 auto; }
+
+.header__title {
+  padding: 20px 0 20px 0; }
+
+.header__text {
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  position: relative;
+  margin-bottom: 33px; }
+
+.header__text::after {
+  content: " ";
+  bottom: -7px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  background: url("../img/vector/line/line0.svg") center no-repeat; }
+
+.image_garden {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 5px; }
+
+.header_wrapper {
+  position: relative; }
+
+.header__images {
+  max-width: 1400px;
+  margin: 0 auto;
+  bottom: 0;
+  left: 0;
+  height: 576px;
+  -webkit-transition: all 0s ease .4s;
+  -o-transition: all 0s ease .4s;
+  transition: all 0s ease .4s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  color: #000; }
+
+.image_sun,
+.image_night {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.image_sun {
+  background: url("../img/garden.png") center/cover no-repeat;
+  z-index: 2;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.image_night {
+  background: url("../img/garden2.png") center/cover no-repeat;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
+
+.header__images:hover {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
+
+.header__image-medal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #fff;
+  width: 13%;
+  height: 13%;
+  position: absolute;
+  top: -2%;
+  right: 1%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+  text-align: center;
+  padding: 11px 5px 10px 5px;
+  z-index: 5;
+  border-radius: 5px; }
+
+.header__image-medal img {
+  width: 100%;
+  height: 33%;
+  -o-object-fit: contain;
+  object-fit: contain; }
+
+.header__medal-text {
+  min-width: 13%; }
+
+.queue_one,
+.queue_two {
+  width: 17%;
+  height: 4%;
+  bottom: 5%; }
+
+.queue_one {
+  left: 30%; }
+
+.queue_two {
+  left: 50%; }
+
+.header__images span {
+  color: #A0A747;
+  letter-spacing: 2px; }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ЗАПРОСЫ ПЕРВЫЙ БЛОК ХЕДЕР***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .image_sun,
+  .image_night {
+    display: none; }
+  .header__images {
+    max-width: 993px;
+    height: 100%; }
+  h5 {
+    font-size: 10px; }
+  .bg {
+    line-height: 8px; } }
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .image_sun,
+  .image_night {
+    display: none; }
+  .header__images {
+    height: 100%;
+    max-width: 769px; }
+  h5 {
+    font-size: 7px; }
+  .bg {
+    font-size: 12px;
+    line-height: 3px; } }
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .header {
+    max-width: 90%; }
+  .image_sun,
+  .image_night {
+    display: none; }
+  .header__images {
+    max-width: 90%;
+    height: 100%;
+    overflow: hidden; }
+  .image_garden {
+    width: 1000px;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin: 15px 1px 1px -332px; }
+  h1 {
+    font-size: 36px; }
+  h5 {
+    font-size: 8px; }
+  .queue_one,
+  .queue_two {
+    width: 27%;
+    left: 2%;
+    font-size: 10px;
+    line-height: 9px; }
+  .queue_one {
+    bottom: 91%; }
+  .queue_two {
+    bottom: 86%; }
+  .header__image-medal {
+    top: 2%;
+    width: 15%; }
+  .header__image-medal img {
+    height: 45%; } }
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px; }
+  .header_logo img {
+    -webkit-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    transform: scale(0.6); }
+  .header__title {
+    padding: 5px 0 10px 0; }
+  .header__text {
+    font-size: 16px;
+    margin-bottom: 15px; }
+  .header__text::after {
+    background-size: contain;
+    left: 35px;
+    width: 78%; }
+  .header__image-medal {
+    width: 23%; }
+  .queue_one,
+  .queue_two {
+    width: 40%; }
+  .image_sun,
+  .image_night {
+    display: none; }
+  .header__images {
+    height: 100%; } }
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+  .header__image-medal {
+    width: 26%; }
+  .queue_one,
+  .queue_two {
+    width: 43%; } }
+
+/************************************************************************************************************************************************************************************
+************ВТОРОЙ БЛОК SQUARE***************************
+********************************************************/
+.container {
+  max-width: 1070px;
+  margin: 0 auto;
+  padding: 0 15px 0 15px;
+  overflow: hidden; }
+
+.square__flex {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.square__flex-item {
+  position: relative;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  padding: 0 10px 10px 0; }
+
+.number15 {
+  position: relative;
+  z-index: 3; }
+
+.number15::before {
+  z-index: -1;
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 75%;
+  background: url("../img/vector/15.png") no-repeat; }
+
+.square_image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px; }
+
+.square_text h4,
+.square_text p {
+  position: absolute;
+  left: 3%;
+  display: inline-block;
+  padding: 5px 10px;
+  line-height: 21px; }
+
+.square_text h4 {
+  bottom: 18%; }
+
+.square_text p {
+  bottom: 5%;
+  font-size: 16px;
+  font-weight: 400; }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ЗАПРОСЫ ВТОРОЙ БЛОК SQUARE***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 806px; }
+  h5 {
+    font-size: 10px; }
+  h4 {
+    font-size: 18px; }
+  .square_text p {
+    font-size: 14px; }
+  .square_text h4, .square_text p {
+    line-height: 14px; }
+  .bg {
+    line-height: 8px; } }
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 591px; }
+  h5 {
+    font-size: 7px; }
+  .square_text h4 {
+    font-size: 19px; }
+  .square__flex-item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%; } }
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .container {
+    max-width: 621px; }
+  .square__flex {
+    max-width: 80%;
+    margin: 0 auto; }
+  .square__flex-item {
+    max-width: 100%;
+    padding: 0 0 15px 0;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%; }
+  .square_text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 100%; }
+  .square_text h4,
+  .square_text p {
+    position: static;
+    background: none;
+    color: #000;
+    text-align: start;
+    line-height: 36px;
+    padding: 0 0; }
+  .square_text h4 {
+    font-size: 34px;
+    font-weight: 600; }
+  .square_text p {
+    font-size: 20px;
+    padding-bottom: 30px;
+    font-weight: 500; }
+  .number15::before {
+    background-size: contain;
+    background-position: center; } }
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .square__flex-item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%; }
+  .square_text h4 {
+    font-size: 27px; }
+  .square_text p {
+    font-size: 18px;
+    font-weight: 600; } }
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+  .square__flex-item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%; } }
+
+/************************************************************************************************************************************************************************************
+************ТРЕТИЙ БЛОК MAP***************************
+********************************************************/
+.map {
+  padding: 50px 0; }
+
+.map__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.map__item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.map__item h6 {
+  text-transform: uppercase;
+  font-weight: 600; }
+
+.line {
+  height: 1px;
+  width: 36%;
+  background-color: #EAE3D9; }
+
+.map__title {
+  padding: 20px 0 50px 0;
+  text-align: center;
+  font-weight: 600;
+  max-width: 700px; }
+
+.map__title span {
+  position: relative; }
+
+.map__title span::before {
+  content: " ";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  background: url("../img/vector/line/line2.png") center/contain no-repeat; }
+
+.map__image img {
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 20px; }
+
+.map__text {
+  padding: 20px 0 50px 0;
+  max-width: 650px;
+  text-align: center; }
+
+.map__text p {
+  font-size: 19px; }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ЗАПРОСЫ ТРЕТИЙ БЛОК MAP***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .line {
+    width: 27%; } }
+
+@media (max-width: 992px) {
+  .line {
+    width: 27%; } }
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .map {
+    overflow: hidden; }
+  .map__flex {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+  .line {
+    width: 17%; }
+  .map__title h2 {
+    font-size: 36px; }
+  .map__item h6 {
+    font-size: 16px; }
+  .map__image {
+    max-width: 100%; }
+  .map__image img {
+    max-width: 1188px;
+    margin: 0 0 0 -479px; }
+  .map__title span::before {
+    bottom: -4px;
+    left: -295px;
+    width: 274px; }
+  .map__text {
+    text-align: start;
+    max-width: 472px; }
+  .map__text p {
+    font-size: 29px;
+    line-height: 38px; } }
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .map__item h6 {
+    font-size: 10px; }
+  .map__title h2 {
+    font-size: 29px; }
+  .map__title span::before {
+    bottom: -4px;
+    left: -230px;
+    width: 166px; } }
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+  .map__title span::before {
+    left: -161px; }
+  .map__text p {
+    font-size: 20px; } }
+
+/************************************************************************************************************************************************************************************
+************ЧЕТВЕРТЫЙ БЛОК SWIPER***************************
+********************************************************/
+.window {
+  padding-bottom: 70px;
+  overflow: hidden; }
+
+.window_title_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 0; }
+
+.window__title {
+  width: 600px; }
+
+.slider__container {
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative; }
+
+.swiper-wrapper {
+  left: -44px; }
+
+.slider__item {
+  margin: 0 15px 0 15px; }
+
+.slider__image {
+  text-align: center;
+  overflow: hidden; }
+
+.slider__image img {
+  display: block;
+  max-width: 100%;
+  max-height: 800px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 5px; }
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: #fff; }
+
+.window .swiper-button-next {
+  right: -175px !important; }
+
+.window .swiper-button-prev {
+  left: -100px !important; }
+
+.window .swiper-button-next,
+.swiper-button-prev {
+  color: #fff; }
+
+.swiper-pagination {
+  left: 310px !important;
+  width: 51% !important;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 8px 5px;
+  border-radius: 5px; }
+
+.swiper-pagination .box {
+  margin: 0 !important;
+  border-radius: 0;
+  background: transparent;
+  font-size: 16px;
+  font-family: 'TT Travels', sans-serif;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  width: 24%;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.swiper-pagination-bullet {
+  color: rgba(255, 255, 255, 0.6);
+  border-bottom: 3px solid;
+  border-bottom-color: #aaa;
+  opacity: 1 !important;
+  margin-bottom: 5px !important; }
+
+.swiper-pagination-bullet:nth-child(3) {
+  padding-right: 15px; }
+
+.swiper-pagination-bullet-active {
+  border-bottom-color: #A0A747; }
+
+.swiper-pagination-bullet-active .bigNumber,
+.swiper-pagination-bullet-active .text {
+  color: #fff !important; }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ЗАПРОСЫ ТРЕТИЙ БЛОК MAP***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .slider__container {
+    max-width: 991px; }
+  .swiper-pagination {
+    left: 231px !important;
+    width: 56% !important; }
+  .swiper-pagination .box {
+    font-size: 13px; } }
+
+@media (max-width: 992px) {
+  .slider__container {
+    max-width: 766px; }
+  .swiper-pagination .box {
+    font-size: 11px; }
+  .swiper-pagination {
+    left: 148px !important;
+    width: 62% !important; } }
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .slider__container {
+    max-width: 385px; }
+  .window__title {
+    width: 449px;
+    font-size: 36px; }
+  .swiper-wrapper {
+    left: -15px; }
+  .slider__item {
+    margin: 0 5px 0 5px; }
+  .slider__image img {
+    max-width: 826px;
+    max-height: 478px; }
+  .swiper-pagination .box {
+    font-size: 9px; }
+  .swiper-pagination {
+    left: 17px !important;
+    width: 90% !important;
+    padding: 5px 0; } }
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .slider__container {
+    max-width: 300px; }
+  .window__title {
+    font-size: 29px; }
+  .swiper-pagination {
+    left: 0 !important;
+    width: 100% !important;
+    background-color: #fff;
+    bottom: -50px !important; }
+  .swiper-pagination-bullet {
+    color: #646562;
+    border-bottom: 2px solid;
+    border-bottom-color: #fff; }
+  .swiper-pagination-bullet-active {
+    border-bottom-color: #A0A747; }
+  .swiper-pagination-bullet-active .bigNumber,
+  .swiper-pagination-bullet-active .text {
+    color: #000 !important; }
+  .swiper-pagination .box {
+    font-size: 9px;
+    font-weight: 500;
+    width: 25%; } }
+
+/* Iphone 5 */
+/************************************************************************************************************************************************************************************
+************ПЯТЫЙ БЛОК НОМЕР***************************
+********************************************************/
+.presentation {
+  padding-bottom: 50px;
+  overflow: hidden; }
+
+.white-wrapper {
+  background: #fff;
+  max-width: 100%;
+  border-radius: 10px;
+  overflow: hidden; }
+
+.presentation__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.presentation__flex-personal {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 90%;
+  flex: 1 1 90%;
+  padding: 50px 0 0 50px;
+  overflow: hidden; }
+
+.presentation__flex-personal h6 {
+  font-size: 16px;
+  letter-spacing: 2px;
+  line-height: 10px;
+  color: #773844;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.presentation__title {
+  padding: 20px 0; }
+
+.presentation__list li {
+  padding: 0 0 0 25px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+  padding-bottom: 15px;
+  background: url("../img/vector/arrow1.png") no-repeat; }
+
+.personal_phone {
+  border-top: 1px solid #EAE3D9;
+  margin: 20px 0 0 0; }
+
+.personal_phone label {
+  color: #000;
+  font-weight: 600;
+  display: block;
+  padding: 10px 0; }
+
+.personal_phone input {
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.personal_phone input:hover {
+  -webkit-box-shadow: 0 0 5px #000;
+  box-shadow: 0 0 5px #000; }
+
+.personal_phone input:active {
+  -webkit-box-shadow: inset 0 0 5px #000;
+  box-shadow: inset 0 0 5px #000;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.personal_phone input:focus {
+  -webkit-box-shadow: inset 0 0 5px #000;
+  box-shadow: inset 0 0 5px #000;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.form-control {
+  font-size: 20px;
+  color: #000;
+  font-weight: 500;
+  background: #F5F3F0;
+  padding: 15px 10px;
+  text-align: start;
+  border-radius: 10px;
+  float: left;
+  margin: 0 10px 5px 0; }
+
+.btn-primary {
+  display: inline-block;
+  padding: 15px 15px; }
+
+.personal_phone p {
+  font-size: 12px;
+  color: #646562;
+  display: inline-block;
+  margin-top: 20px;
+  max-width: 520px;
+  padding-bottom: 50px; }
+
+.personal_phone span {
+  display: inline-block;
+  border-bottom: 1px solid #EAE3D9; }
+
+.presentation_flex-image {
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto; }
+
+.presentation_flex-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  z-index: 0;
+  /*position: relative;
+	top: 61px;*/ }
+
+.presentation_flex-image:before {
+  content: " ";
+  width: 100%;
+  height: 55%;
+  top: -50px;
+  left: 20px;
+  position: absolute;
+  z-index: -1;
+  background: url("../img/vector/girl-svg.png") 100% 100%/cover no-repeat; }
+
+.presentation-image {
+  position: relative; }
+
+.present__image-text {
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+  text-shadow: 0px 4px 12px #000000; }
+
+.present__image-text h5 {
+  display: block;
+  padding-bottom: 10px;
+  max-width: 100px;
+  font-weight: 600;
+  color: #fff; }
+
+.present__image-text p {
+  display: inline-block;
+  max-width: 150px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px; }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ПЯТЫЙ БЛОК***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .presentation-image {
+    bottom: -169px; }
+  .presentation__list li {
+    background: url(../img/vector/arrow1.png) 0 35% no-repeat; }
+  .btn {
+    padding: 15px 15px; } }
+
+@media (max-width: 992px) {
+  .presentation__flex-personal {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    padding: 50px 50px 10px 50px; }
+  .presentation__flex {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .presentation_flex-image {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto; }
+  .presentation_flex-image img {
+    width: none; } }
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  h2 {
+    font-size: 36px; } }
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 29px; }
+  .presentation__flex-personal {
+    padding: 20px 20px 10px 20px; }
+  .presentation__flex-personal h6 {
+    font-size: 13px; }
+  .presentation__list li {
+    font-size: 18px; }
+  .personal_phone {
+    text-align: center; }
+  .form-control {
+    font-size: 16px;
+    padding: 15px 10px;
+    text-align: center;
+    margin: 0 10px 5px 0;
+    float: none; } }
+
+/* Iphone 5 */
+/************************************************************************************************************************************************************************************
+*****ШЕСТОЙ БЛОК***************************
+********************************************************/
+.lobby {
+  padding-bottom: 60px; }
+
+.lobby__title {
+  padding: 50px 0;
+  text-align: center; }
+
+.lobby__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.lobby__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 20px; }
+
+.lobby_flex-title {
+  background: url("../img/vector/door-logo.png") no-repeat;
+  margin: 40px 90px 20px 75px;
+  padding-top: 4px;
+  padding-left: 35px; }
+
+.lobby_flex-title h3 {
+  font-weight: 600; }
+
+.lobby_items-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 75px;
+  padding-bottom: 30px; }
+
+.lobby_items {
+  font-size: 20px;
+  position: relative;
+  margin-right: 10px;
+  background-color: #F7F1E9;
+  color: #000;
+  text-align: center;
+  padding: 10px 10px 10px 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  border-radius: 5px;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.lobby_items:before {
+  background: url("../img/vector/star.png") 3% 41%/15px 15px no-repeat;
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.lobby_items:hover {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9); }
+
+.lobby_flex-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 1000px;
+  padding: 0 20px 20px 20px; }
+
+.lobby_image-left {
+  margin-right: 15px; }
+
+.lobby_image-left img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain; }
+
+.lobby_image-right img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain; }
+
+.lobby_flex-title-hall {
+  background: url("../img/vector/hall.png") no-repeat;
+  margin: 40px 90px 20px 75px;
+  padding-top: 4px;
+  padding-left: 45px; }
+
+.lobby_flex-title-hall h3 {
+  font-weight: 600; }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ШЕСТОЙ БЛОК***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .lobby_items {
+    font-size: 16px; } }
+
+@media (max-width: 992px) {
+  h3 {
+    font-size: 24px; }
+  .lobby_items {
+    font-size: 11px; }
+  .lobby_flex-title {
+    margin-left: 55px; }
+  .lobby_items-flex {
+    margin-left: 15px; } }
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .lobby_items-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 100%;
+    margin-left: 45px; }
+  .lobby_items {
+    display: block;
+    margin-bottom: 10px;
+    text-align: start;
+    font-size: 20px;
+    position: relative;
+    background-color: #fff;
+    padding: 10px 10px 10px 35px;
+    margin-right: 0; }
+  .lobby_items:after {
+    content: " ";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background: #EAE3D9;
+    bottom: -5px;
+    left: 37px; }
+  .lobby_items:last-child:after {
+    visibility: hidden; }
+  .lobby_flex-image {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .lobby_image-left {
+    margin-right: 0;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    margin-bottom: 10px; }
+  .lobby_image-right {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%; }
+  .left img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin-bottom: -84px; }
+  .right img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin-bottom: -106px; } }
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .lobby_items {
+    font-size: 16px; }
+  .right img {
+    margin-bottom: -58px; }
+  .left img {
+    margin-bottom: -58px; } }
+
+/* Iphone 5 */
+/************************************************************************************************************************************************************************************
+*****СЕДЬМОЙ БЛОК***************************
+**********************************************/
+.rare__title {
+  text-align: center;
+  padding: 50px 67px; }
+
+.rare__title span {
+  position: relative; }
+
+.rare__title span:after {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 7px;
+  bottom: -2px;
+  left: 0;
+  background: url("../img/vector/line/line3.png") 100% 100%/cover no-repeat; }
+
+.rare__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 10px; }
+
+.rare_item-text {
+  max-width: 535px;
+  padding: 50px 50px 50px 50px; }
+  .rare_item-text p {
+    max-width: 402px;
+    line-height: 30px;
+    padding: 30px 0 70px 0; }
+
+.rare_item-text h3 {
+  font-weight: 600; }
+
+.rare_item-text a {
+  min-width: 190px;
+  display: inline-block;
+  color: #0A3CE4;
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 5px;
+  padding-right: 30px;
+  border-bottom: 1px solid rgba(10, 60, 228, 0.3);
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  position: relative;
+  padding: 5px;
+  overflow: hidden; }
+
+.rare_item-text a::before {
+  content: " ";
+  position: absolute;
+  width: 115%;
+  height: 100%;
+  top: 2px;
+  left: 0;
+  background: rgba(10, 60, 228, 0.3);
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  top: -30px; }
+
+.rare_item-text a:hover:before {
+  top: 30px; }
+
+.rare_item-text a:after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  top: 5px;
+  right: -165px;
+  background: url("../img/vector/arrow-loft.png") no-repeat; }
+
+.rare_item-image {
+  padding: 20px 20px 20px 20px; }
+
+.rare_item-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: unset;
+  object-fit: unset; }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА СЕДЬМОЙ БЛОК***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .rare_item-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 440px;
+    max-width: 356px;
+    padding: 25px 10px 25px 35px; }
+  .rare_item-text h3 {
+    font-size: 28px; }
+  .rare_item-text p {
+    font-size: 18px;
+    padding-bottom: 35px; }
+  .rare_item-text a {
+    max-width: 190px; } }
+
+@media (max-width: 992px) {
+  .rare__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse; }
+  .rare__title {
+    padding: 35px 40px; }
+  .rare_item-image {
+    padding: 10px 10px 10px 10px; }
+  .rare_item-text {
+    max-width: 100%;
+    padding: 20px 20px 20px 20px; }
+  .rare_item-text p {
+    max-width: 100%;
+    padding: 15px 0 25px 0; } }
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .rare__title {
+    padding: 35px 30px; } }
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .rare__title {
+    padding: 35px 12px; } }
+
+/* Iphone 5 */
+/************************************************************************************************************************************************************************************
+*****ВОСЬМОЙ БЛОК***************************
+********************************************************/
+.theme {
+  padding-top: 80px; }
+
+.btn-down {
+  display: none; }
+
+.theme__title {
+  text-align: center;
+  padding: 35px 0;
+  border-bottom: 1px solid #EAE3D9; }
+
+.theme__flex {
+  padding-bottom: 70px; }
+
+.theme__flex_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 20px 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.theme__flex_title h3 {
+  font-weight: 600; }
+
+.theme__flex-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.theme__image {
+  margin-right: 20px; }
+
+.theme__image img {
+  max-width: 577px;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 5px; }
+
+.theme__flex-choice {
+  border-radius: 5px;
+  padding: 30px 30px 30px 50px;
+  background-color: #fff; }
+
+.theme__flex-choice img {
+  margin-left: -22px; }
+
+.theme__flex-choice img:first-child {
+  margin-left: 0; }
+
+.theme__flex-choice h6 {
+  color: #773844;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 25px 0 10px 0; }
+
+.theme__flex-choice p {
+  font-size: 18px;
+  line-height: 27px; }
+
+.theme_choice img {
+  -webkit-transition: .5s all;
+  -o-transition: .5s all;
+  transition: .5s all; }
+
+.theme_choice:hover .ellipse1 {
+  -webkit-transform: translate(0);
+  -ms-transform: translate(0);
+  transform: translate(0); }
+
+.theme_choice:hover .ellipse2 {
+  -webkit-transform: translate(-55px);
+  -ms-transform: translate(-55px);
+  transform: translate(-55px); }
+
+.theme_choice:hover .ellipse3 {
+  -webkit-transform: translate(-110px);
+  -ms-transform: translate(-110px);
+  transform: translate(-110px); }
+
+.theme__flex-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0; }
+
+.theme__image-1 img {
+  width: 100%;
+  padding-right: 20px; }
+
+.theme__image-2 img {
+  width: 100%;
+  height: 100%; }
+
+.theme__flex_title-down {
+  border-top: 1px solid #EAE3D9; }
+
+.dark_theme {
+  background-color: #42352A; }
+
+.dark_theme h6 {
+  color: #C2BDB6; }
+
+.dark_theme p {
+  color: #fff; }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ВОСЬМОЙ БЛОК***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .theme__image img {
+    max-width: 380px;
+    -o-object-fit: contain;
+    object-fit: contain; } }
+
+@media (max-width: 992px) {
+  .theme__flex {
+    padding-bottom: 20px; }
+  .theme__flex-text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .theme__image {
+    margin-right: 0; }
+  .theme__image img {
+    max-width: 100%;
+    height: 350px; }
+  .theme__flex-choice {
+    margin-top: 5px;
+    padding: 15px 15px 15px 15px; }
+  .theme__flex-image {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .theme__image-1 img {
+    -o-object-fit: fill;
+    object-fit: fill;
+    padding-right: 0; }
+  .theme__image-2 img {
+    margin-top: 5px;
+    max-width: 100%;
+    height: 350px;
+    -o-object-fit: fill;
+    object-fit: fill; }
+  .theme__flex_title .btn {
+    display: none; }
+  .btn-down {
+    display: block;
+    margin: 5px 10px;
+    text-align: center; } }
+
+/* Landscape phones and portrait tablets */
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .theme {
+    padding-top: 30px; }
+  .theme__flex-choice p {
+    font-size: 21px; }
+  .theme__image-2 img {
+    height: 250px; } }
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+  .theme__image-2 img {
+    height: 220px; } }
+
+/************************************************************************************************************************************************************************************
+*****ДЕВЯТЫЙ БЛОК***************************
+********************************************************/
+.clasters {
+  overflow: hidden; }
+
+.clasters__title {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+  padding-bottom: 50px; }
+
+.clasters__wrapper {
+  background: #1F2057; }
+
+.clasters__wrapper_text {
+  padding: 70px 0 20px 0; }
+
+.wrappers__title {
+  background: url("../img/vector/wave.png") 25% 41% no-repeat; }
+
+.wrapper__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.wrappers__title h2, .wrapper__text p {
+  color: #fff; }
+
+.wrapper__text p {
+  padding-top: 15px;
+  font-size: 17px;
+  max-width: 400px;
+  line-height: 18px; }
+
+.wrapper__text .btn {
+  background: #fff;
+  padding: 16px 30px 16px 30px;
+  color: #000;
+  font-weight: 500; }
+
+.slider_river-container {
+  max-width: 1070px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  position: relative; }
+
+.river__slide {
+  left: 40px;
+  padding: 15px 15px;
+  text-align: center; }
+
+.river__image img {
+  max-width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  border-radius: 5px; }
+
+.clasters__wrapper-green {
+  background: #A0A747; }
+
+.wrappers__title-park h2 {
+  color: #fff; }
+
+.wrappers__title-park {
+  background: url("../img/vector/wood.png") 25% 41% no-repeat; }
+
+.wrapper__text-park p {
+  max-width: 450px; }
+
+.swiper-button-next {
+  right: -265px !important; }
+
+.swiper-button-prev {
+  left: -265px !important; }
+
+.arrow-river {
+  position: absolute;
+  display: inline-block;
+  width: 80px !important;
+  height: 80px !important;
+  background: rgba(0, 0, 0, 0.48);
+  border-radius: 50%;
+  color: #fff !important;
+  font-family: 'Helvetica Neue Cyr' !important;
+  content: " " !important;
+  top: 45% !important; }
+
+.swiper-button-next,
+.swiper-button-prev {
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all; }
+
+.swiper-button-next:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05); }
+
+.swiper-button-prev:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05); }
+
+.swiper-button-next:active {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9); }
+
+.swiper-button-prev:active {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9); }
+
+.swiper-button-next:after,
+.swiper-rtl, .swiper-button-prev:after {
+  content: " " !important; }
+
+.swiper-button-prev img {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ДЕВЯТЫй БЛОК***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .wrappers__title {
+    background-position: 35% 41%; }
+  .wrappers__title-park {
+    background-position: 32% 41%; }
+  .swiper-button-next {
+    right: 10px !important; }
+  .swiper-button-prev {
+    left: 3px !important; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .wrappers__title {
+    background-position: 49% 41%; }
+  .wrappers__title-park {
+    background-position: 47% 41%; }
+  .wrapper__text .btn {
+    width: 403px;
+    padding: 15px 15px 15px 15px; }
+  .swiper-button-next {
+    right: 20px !important; }
+  .swiper-button-prev {
+    left: 13px !important; } }
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .wrapper__text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .clasters__title {
+    padding-top: 100px; }
+  .river__slide {
+    left: 15px; }
+  .river__image img {
+    height: 470px;
+    -o-object-fit: cover;
+    object-fit: cover; }
+  .wrappers__title {
+    background-position: 50% 41%; }
+  .wrappers__title-park {
+    background-position: 47% 41%; }
+  .wrapper__text {
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch; }
+  .wrapper__text .btn {
+    text-align: center; }
+  .wrapper__text p {
+    padding: 20px 0; }
+  .swiper-button-next {
+    right: 20px !important; }
+  .swiper-button-prev {
+    left: 13px !important; } }
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .wrappers__title {
+    background-position: 60% 41%;
+    background-size: contain; }
+  .wrappers__title-park {
+    background-position: 50% 41%;
+    background-size: contain; } }
+
+/* Iphone 5 */
+/************************************************************************************************************************************************************************************
+*****ДЕСЯТЫЙ БЛОК***************************
+********************************************************/
+.sport {
+  padding: 70px 0; }
+
+.sport__title {
+  padding: 50px 0;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto; }
+
+.sport__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 10px; }
+
+.sport__item-text {
+  max-width: 32%;
+  padding: 25px 20px;
+  border-radius: 5px;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all; }
+
+.sport__item-text:hover {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+  -webkit-box-shadow: 1px 1px 5px #000;
+  box-shadow: 1px 1px 5px #000;
+  cursor: -webkit-grab;
+  cursor: grab; }
+
+.green_bg {
+  background: #BE6833; }
+
+.sport__item-text h3 {
+  display: inline-block;
+  padding: 20px 73px 58px 0;
+  font-weight: 600;
+  color: #fff; }
+
+.sport__item-text p {
+  color: #fff;
+  font-weight: 500;
+  line-height: 27px; }
+
+.sport__item_text-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.sport__item_text-image img {
+  padding-right: 5px; }
+
+.sport__item-image {
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all; }
+
+.sport__item-image:hover {
+  -webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  transform: scale(1.01);
+  -webkit-box-shadow: 1px 1px 5px #000;
+  box-shadow: 1px 1px 5px #000;
+  cursor: -webkit-grab;
+  cursor: grab; }
+
+.sport__item-image img {
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 5px; }
+
+.pad-right {
+  margin-right: 5px; }
+
+.pad-left {
+  margin-left: 5px; }
+
+.orange {
+  background: #a0a747; }
+
+.orange h3 {
+  padding: 20px 50px 16px 0; }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ДЕВЯТЫй БЛОК***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .sport__item-text h3 {
+    font-size: 26px; }
+  .sport__item-text p {
+    font-size: 16px;
+    line-height: 20px; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .sport__item-text h3 {
+    font-size: 18px;
+    padding-bottom: 18px; }
+  .sport__item-text p {
+    font-size: 14px;
+    line-height: 18px; } }
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .sport__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse; }
+  .sport__item-text {
+    max-width: 100%; }
+  .green_bg {
+    margin-right: 0;
+    margin-top: 10px; }
+  .pad-right {
+    margin-right: 0; }
+  .pad-left {
+    margin-left: 0; }
+  .sport__item-image img {
+    height: 323px; }
+  .pad-bot {
+    margin-bottom: 10px; }
+  .orange {
+    margin-bottom: 10px; }
+  .sport__item-image img {
+    width: 100%; } }
+
+/* Portrait phones and smaller */
+/* Iphone 5 */
+/************************************************************************************************************************************************************************************
+*****ОДИНАДЦАТЫЙ БЛОК***************************
+********************************************************/
+.footer {
+  background: #fff; }
+
+.footer__flex_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  padding: 50px 0 15px 0;
+  border-bottom: 1px solid #EAE3D9; }
+
+.footer__title {
+  max-width: 680px; }
+
+.footer__flex_title h3 {
+  font-weight: 600; }
+
+.footer__image {
+  width: 100%; }
+
+.footer__body {
+  padding: 50px 0; }
+
+.footer__body_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 20px 0 40px 0; }
+
+.footer__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 20px 0 40px 0; }
+
+.border {
+  border-top: 2px solid #EAE3D9;
+  border-bottom: 2px solid #EAE3D9; }
+
+.footer__body_flex p:first-child {
+  width: 255px;
+  font-size: 24px; }
+
+.adres {
+  font-size: 20px;
+  margin-left: 43px;
+  font-weight: 600;
+  line-height: 30px; }
+
+.footer__text_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.footer__image {
+  padding-bottom: 20px; }
+
+.footer__number {
+  margin-right: 100px;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative; }
+
+.footer__number::after {
+  content: " работаем ";
+  background: url("../img/logo/ellipsr.png") 0% 100% no-repeat;
+  position: absolute;
+  top: 0;
+  right: -35px;
+  padding-left: 7px;
+  font-size: 13px;
+  width: 30px;
+  height: 10px;
+  color: #A0A747; }
+
+.footer__body_image {
+  margin-right: -150px; }
+
+.footer__body_image img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+/************************************************************************************************************************************************************************************
+*****МЕДИА ОДИННАДЦАТЫЙ БЛОК***************************
+********************************************************/
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .footer__body_flex p:first-child {
+    width: 164px;
+    font-size: 19px; }
+  .footer__body_image {
+    margin-right: -200px; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .footer__flex_title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+  .footer_logo {
+    padding-bottom: 20px; }
+  .footer__body_flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .footer__body_image {
+    margin-right: 0; } }
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .footer__flex_title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+  .footer_logo {
+    padding-bottom: 20px; }
+  .footer__body_flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .footer__body_image {
+    margin-right: 0; }
+  .footer__body_flex p:first-child {
+    width: 150px; } }
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .footer__body_flex p:first-child {
+    width: 90px;
+    font-size: 16px; }
+  .footer__number {
+    font-size: 16px; }
+  .adres {
+    font-size: 16px; } }
+
+/* Iphone 5 */
